@@ -1,7 +1,5 @@
 # Solidity Parser for JavaScript
 
-[![npm version](https://badge.fury.io/js/%40solidity-parser%2Fparser.svg)](https://badge.fury.io/js/%40solidity-parser%2Fparser)
-
 A JavaScript package for parsing [Solidity](https://solidity.readthedocs.io/) code using [ANTLR (ANother Tool for Language Recognition)](https://www.antlr.org/) grammar.
 
 This is a fork of [@federicobond](https://github.com/federicobond)'s original [repo](https://github.com/federicobond/solidity-parser-antlr),
@@ -14,13 +12,13 @@ The following installation options assume [Node.js](https://nodejs.org/en/downlo
 Using [Node Package Manager (npm)](https://www.npmjs.com/).
 
 ```
-npm install @solidity-parser/parser
+npm install https://github.com/spellblock/solidity-parser
 ```
 
 Using [yarn](https://yarnpkg.com/)
 
 ```
-yarn add @solidity-parser/parser
+yarn add https://github.com/spellblock/solidity-parser
 ```
 
 ## Usage
@@ -127,15 +125,6 @@ The [mocha](https://mochajs.org/) tests under the [test](./test) folder can be r
 ```
 yarn run test
 ```
-
-## Used by
-
-* [Hardhat](https://hardhat.org/)
-* [sol2uml](https://github.com/naddison36/sol2uml)
-* [Solhint](https://github.com/protofire/solhint/)
-* [solidity-coverage](https://github.com/sc-forks/solidity-coverage)
-* [prettier-solidity](https://github.com/prettier-solidity/prettier-plugin-solidity/)
-* [eth-gas-reporter](https://github.com/cgewecke/eth-gas-reporter)
 
 ## License
 
