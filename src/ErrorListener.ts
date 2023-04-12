@@ -1,6 +1,6 @@
-import antlr4 from "antlr4/index";
+import { ErrorListener as ANTLRErrorListener } from "antlr4";
 
-class ErrorListener extends antlr4.error.ErrorListener {
+class ErrorListener extends ANTLRErrorListener<any> {
   private _errors: any[];
 
   constructor() {
