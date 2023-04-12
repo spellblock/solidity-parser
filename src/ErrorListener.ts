@@ -1,12 +1,12 @@
-import antlr4 from 'antlr4'
+import antlr4 from "antlr4/index";
 
 class ErrorListener extends antlr4.error.ErrorListener {
-  private _errors: any[]
+  private _errors: any[];
 
   constructor() {
-    super()
+    super();
 
-    this._errors = []
+    this._errors = [];
   }
 
   syntaxError(
@@ -16,16 +16,16 @@ class ErrorListener extends antlr4.error.ErrorListener {
     column: number,
     message: string
   ) {
-    this._errors.push({ message, line, column })
+    this._errors.push({ message, line, column });
   }
 
   getErrors(): any[] {
-    return this._errors
+    return this._errors;
   }
 
   hasErrors() {
-    return this._errors.length > 0
+    return this._errors.length > 0;
   }
 }
 
-export default ErrorListener
+export default ErrorListener;
