@@ -9,7 +9,8 @@
   },
   "files": [
     "dist/**/*",
-    "src/**/*"
+    "src/**/*",
+    "tsconfig.json"
   ],
   "types": "dist/src/index.d.ts",
   "scripts": {
