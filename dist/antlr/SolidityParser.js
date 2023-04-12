@@ -1,43 +1,19 @@
-"use strict";
 // Generated from antlr/Solidity.g4 by ANTLR 4.9.0-SNAPSHOT
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.StatementContext = exports.BlockContext = exports.StateMutabilityContext = exports.StorageLocationContext = exports.FunctionTypeNameContext = exports.MappingValueNameContext = exports.MappingKeyNameContext = exports.MappingContext = exports.MappingKeyContext = exports.UserDefinedTypeNameContext = exports.TypeNameContext = exports.VariableDeclarationContext = exports.FunctionTypeParameterContext = exports.FunctionTypeParameterListContext = exports.EventParameterContext = exports.EventParameterListContext = exports.ParameterContext = exports.ParameterListContext = exports.EnumDefinitionContext = exports.EnumValueContext = exports.EventDefinitionContext = exports.ModifierListContext = exports.ReturnParametersContext = exports.FunctionDescriptorContext = exports.FunctionDefinitionContext = exports.ModifierInvocationContext = exports.ModifierDefinitionContext = exports.StructDefinitionContext = exports.UserDefinableOperatorsContext = exports.UsingForObjectDirectiveContext = exports.UsingForObjectContext = exports.UsingForDeclarationContext = exports.TypeDefinitionContext = exports.CustomErrorDefinitionContext = exports.FileLevelConstantContext = exports.StateVariableDeclarationContext = exports.ContractPartContext = exports.InheritanceSpecifierContext = exports.ContractDefinitionContext = exports.ImportPathContext = exports.ImportDirectiveContext = exports.ImportDeclarationContext = exports.VersionConstraintContext = exports.VersionOperatorContext = exports.VersionContext = exports.PragmaValueContext = exports.PragmaNameContext = exports.PragmaDirectiveContext = exports.SourceUnitContext = exports.SolidityParser = void 0;
-exports.HexLiteralContext = exports.IdentifierContext = exports.NumberLiteralContext = exports.TupleExpressionContext = exports.AssemblyLiteralContext = exports.AssemblyIfContext = exports.AssemblyForContext = exports.AssemblyFunctionReturnsContext = exports.AssemblyFunctionDefinitionContext = exports.AssemblyCaseContext = exports.AssemblySwitchContext = exports.LabelDefinitionContext = exports.AssemblyStackAssignmentContext = exports.AssemblyIdentifierListContext = exports.AssemblyIdentifierOrListContext = exports.AssemblyAssignmentContext = exports.AssemblyLocalDefinitionContext = exports.AssemblyCallContext = exports.AssemblyMemberContext = exports.AssemblyExpressionContext = exports.AssemblyItemContext = exports.AssemblyBlockContext = exports.FunctionCallContext = exports.FunctionCallArgumentsContext = exports.NameValueContext = exports.NameValueListContext = exports.ExpressionListContext = exports.PrimaryExpressionContext = exports.ExpressionContext = exports.ElementaryTypeNameContext = exports.IdentifierListContext = exports.VariableDeclarationListContext = exports.VariableDeclarationStatementContext = exports.RevertStatementContext = exports.EmitStatementContext = exports.ThrowStatementContext = exports.ReturnStatementContext = exports.BreakStatementContext = exports.ContinueStatementContext = exports.DoWhileStatementContext = exports.InlineAssemblyStatementFlagContext = exports.InlineAssemblyStatementContext = exports.ForStatementContext = exports.UncheckedStatementContext = exports.SimpleStatementContext = exports.WhileStatementContext = exports.CatchClauseContext = exports.TryStatementContext = exports.IfStatementContext = exports.ExpressionStatementContext = void 0;
-exports.StringLiteralContext = exports.OverrideSpecifierContext = void 0;
-const ATN_1 = require("antlr4ts/atn/ATN");
-const ATNDeserializer_1 = require("antlr4ts/atn/ATNDeserializer");
-const FailedPredicateException_1 = require("antlr4ts/FailedPredicateException");
-const NoViableAltException_1 = require("antlr4ts/NoViableAltException");
-const Parser_1 = require("antlr4ts/Parser");
-const ParserRuleContext_1 = require("antlr4ts/ParserRuleContext");
-const ParserATNSimulator_1 = require("antlr4ts/atn/ParserATNSimulator");
-const RecognitionException_1 = require("antlr4ts/RecognitionException");
-const Token_1 = require("antlr4ts/Token");
-const VocabularyImpl_1 = require("antlr4ts/VocabularyImpl");
-const Utils = __importStar(require("antlr4ts/misc/Utils"));
-class SolidityParser extends Parser_1.Parser {
+import { ATN } from "antlr4ts/atn/ATN";
+import { ATNDeserializer } from "antlr4ts/atn/ATNDeserializer";
+import { FailedPredicateException } from "antlr4ts/FailedPredicateException";
+import { NoViableAltException } from "antlr4ts/NoViableAltException";
+import { Parser } from "antlr4ts/Parser";
+import { ParserRuleContext } from "antlr4ts/ParserRuleContext";
+import { ParserATNSimulator } from "antlr4ts/atn/ParserATNSimulator";
+import { RecognitionException } from "antlr4ts/RecognitionException";
+import { Token } from "antlr4ts/Token";
+import { VocabularyImpl } from "antlr4ts/VocabularyImpl";
+import * as Utils from "antlr4ts/misc/Utils";
+export class SolidityParser extends Parser {
     constructor(input) {
         super(input);
-        this._interp = new ParserATNSimulator_1.ParserATNSimulator(SolidityParser._ATN, this);
+        this._interp = new ParserATNSimulator(SolidityParser._ATN, this);
     }
     // @Override
     // @NotNull
@@ -52,7 +28,7 @@ class SolidityParser extends Parser_1.Parser {
     // @Override
     get serializedATN() { return SolidityParser._serializedATN; }
     createFailedPredicateException(predicate, message) {
-        return new FailedPredicateException_1.FailedPredicateException(this, predicate, message);
+        return new FailedPredicateException(this, predicate, message);
     }
     // @RuleVersion(0)
     sourceUnit() {
@@ -141,7 +117,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -173,7 +149,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -199,7 +175,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -245,7 +221,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -295,7 +271,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -323,7 +299,7 @@ class SolidityParser extends Parser_1.Parser {
                     this._errHandler.recoverInline(this);
                 }
                 else {
-                    if (this._input.LA(1) === Token_1.Token.EOF) {
+                    if (this._input.LA(1) === Token.EOF) {
                         this.matchedEOF = true;
                     }
                     this._errHandler.reportMatch(this);
@@ -332,7 +308,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -390,7 +366,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -428,7 +404,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -504,7 +480,7 @@ class SolidityParser extends Parser_1.Parser {
                                 }
                                 break;
                             default:
-                                throw new NoViableAltException_1.NoViableAltException(this);
+                                throw new NoViableAltException(this);
                         }
                         this.state = 273;
                         this._errHandler.sync(this);
@@ -563,7 +539,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -589,7 +565,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -626,7 +602,7 @@ class SolidityParser extends Parser_1.Parser {
                     this._errHandler.recoverInline(this);
                 }
                 else {
-                    if (this._input.LA(1) === Token_1.Token.EOF) {
+                    if (this._input.LA(1) === Token.EOF) {
                         this.matchedEOF = true;
                     }
                     this._errHandler.reportMatch(this);
@@ -682,7 +658,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -729,7 +705,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -817,7 +793,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -886,7 +862,7 @@ class SolidityParser extends Parser_1.Parser {
                                 }
                                 break;
                             default:
-                                throw new NoViableAltException_1.NoViableAltException(this);
+                                throw new NoViableAltException(this);
                         }
                     }
                     this.state = 353;
@@ -911,7 +887,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -947,7 +923,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -979,7 +955,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -1013,7 +989,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -1078,7 +1054,7 @@ class SolidityParser extends Parser_1.Parser {
                         }
                         break;
                     default:
-                        throw new NoViableAltException_1.NoViableAltException(this);
+                        throw new NoViableAltException(this);
                 }
                 this.state = 387;
                 this._errHandler.sync(this);
@@ -1094,7 +1070,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -1162,11 +1138,11 @@ class SolidityParser extends Parser_1.Parser {
                     }
                     break;
                 default:
-                    throw new NoViableAltException_1.NoViableAltException(this);
+                    throw new NoViableAltException(this);
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -1204,7 +1180,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -1232,7 +1208,7 @@ class SolidityParser extends Parser_1.Parser {
                     this._errHandler.recoverInline(this);
                 }
                 else {
-                    if (this._input.LA(1) === Token_1.Token.EOF) {
+                    if (this._input.LA(1) === Token.EOF) {
                         this.matchedEOF = true;
                     }
                     this._errHandler.reportMatch(this);
@@ -1241,7 +1217,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -1301,7 +1277,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -1357,7 +1333,7 @@ class SolidityParser extends Parser_1.Parser {
                                 }
                                 break;
                             default:
-                                throw new NoViableAltException_1.NoViableAltException(this);
+                                throw new NoViableAltException(this);
                         }
                     }
                     this.state = 440;
@@ -1380,12 +1356,12 @@ class SolidityParser extends Parser_1.Parser {
                         }
                         break;
                     default:
-                        throw new NoViableAltException_1.NoViableAltException(this);
+                        throw new NoViableAltException(this);
                 }
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -1432,7 +1408,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -1485,12 +1461,12 @@ class SolidityParser extends Parser_1.Parser {
                         }
                         break;
                     default:
-                        throw new NoViableAltException_1.NoViableAltException(this);
+                        throw new NoViableAltException(this);
                 }
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -1551,11 +1527,11 @@ class SolidityParser extends Parser_1.Parser {
                     }
                     break;
                 default:
-                    throw new NoViableAltException_1.NoViableAltException(this);
+                    throw new NoViableAltException(this);
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -1583,7 +1559,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -1670,7 +1646,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -1712,7 +1688,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -1738,7 +1714,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -1796,7 +1772,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -1850,7 +1826,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -1896,7 +1872,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -1950,7 +1926,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -1995,7 +1971,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -2049,7 +2025,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -2085,7 +2061,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -2123,7 +2099,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -2193,7 +2169,7 @@ class SolidityParser extends Parser_1.Parser {
                 this.state = 593;
                 this._errHandler.sync(this);
                 _alt = this.interpreter.adaptivePredict(this._input, 60, this._ctx);
-                while (_alt !== 2 && _alt !== ATN_1.ATN.INVALID_ALT_NUMBER) {
+                while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
                     if (_alt === 1) {
                         if (this._parseListeners != null) {
                             this.triggerExitRuleEvent();
@@ -2230,7 +2206,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -2257,7 +2233,7 @@ class SolidityParser extends Parser_1.Parser {
                 this.state = 601;
                 this._errHandler.sync(this);
                 _alt = this.interpreter.adaptivePredict(this._input, 61, this._ctx);
-                while (_alt !== 2 && _alt !== ATN_1.ATN.INVALID_ALT_NUMBER) {
+                while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
                     if (_alt === 1) {
                         {
                             {
@@ -2275,7 +2251,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -2314,7 +2290,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -2369,7 +2345,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -2395,7 +2371,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -2421,7 +2397,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -2450,7 +2426,7 @@ class SolidityParser extends Parser_1.Parser {
                 this.state = 632;
                 this._errHandler.sync(this);
                 _alt = this.interpreter.adaptivePredict(this._input, 66, this._ctx);
-                while (_alt !== 2 && _alt !== ATN_1.ATN.INVALID_ALT_NUMBER) {
+                while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
                     if (_alt === 1) {
                         {
                             this.state = 630;
@@ -2478,7 +2454,7 @@ class SolidityParser extends Parser_1.Parser {
                                     }
                                     break;
                                 default:
-                                    throw new NoViableAltException_1.NoViableAltException(this);
+                                    throw new NoViableAltException(this);
                             }
                         }
                     }
@@ -2501,7 +2477,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -2529,7 +2505,7 @@ class SolidityParser extends Parser_1.Parser {
                     this._errHandler.recoverInline(this);
                 }
                 else {
-                    if (this._input.LA(1) === Token_1.Token.EOF) {
+                    if (this._input.LA(1) === Token.EOF) {
                         this.matchedEOF = true;
                     }
                     this._errHandler.reportMatch(this);
@@ -2538,7 +2514,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -2566,7 +2542,7 @@ class SolidityParser extends Parser_1.Parser {
                     this._errHandler.recoverInline(this);
                 }
                 else {
-                    if (this._input.LA(1) === Token_1.Token.EOF) {
+                    if (this._input.LA(1) === Token.EOF) {
                         this.matchedEOF = true;
                     }
                     this._errHandler.reportMatch(this);
@@ -2575,7 +2551,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -2618,7 +2594,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -2748,7 +2724,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -2776,7 +2752,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -2822,7 +2798,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -2876,7 +2852,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -2923,7 +2899,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -2957,7 +2933,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -2997,7 +2973,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -3025,7 +3001,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -3104,7 +3080,7 @@ class SolidityParser extends Parser_1.Parser {
                         }
                         break;
                     default:
-                        throw new NoViableAltException_1.NoViableAltException(this);
+                        throw new NoViableAltException(this);
                 }
                 this.state = 722;
                 this._errHandler.sync(this);
@@ -3159,7 +3135,7 @@ class SolidityParser extends Parser_1.Parser {
                         }
                         break;
                     default:
-                        throw new NoViableAltException_1.NoViableAltException(this);
+                        throw new NoViableAltException(this);
                 }
                 this.state = 725;
                 this._errHandler.sync(this);
@@ -3177,7 +3153,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -3228,7 +3204,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -3254,7 +3230,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -3292,7 +3268,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -3320,7 +3296,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -3348,7 +3324,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -3386,7 +3362,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -3414,7 +3390,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -3444,7 +3420,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -3474,7 +3450,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -3540,7 +3516,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -3597,7 +3573,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -3625,7 +3601,7 @@ class SolidityParser extends Parser_1.Parser {
                 this.state = 809;
                 this._errHandler.sync(this);
                 _alt = this.interpreter.adaptivePredict(this._input, 88, this._ctx);
-                while (_alt !== 2 && _alt !== ATN_1.ATN.INVALID_ALT_NUMBER) {
+                while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
                     if (_alt === 1) {
                         {
                             {
@@ -3661,7 +3637,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -3689,7 +3665,7 @@ class SolidityParser extends Parser_1.Parser {
                     this._errHandler.recoverInline(this);
                 }
                 else {
-                    if (this._input.LA(1) === Token_1.Token.EOF) {
+                    if (this._input.LA(1) === Token.EOF) {
                         this.matchedEOF = true;
                     }
                     this._errHandler.reportMatch(this);
@@ -3698,7 +3674,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -3757,7 +3733,7 @@ class SolidityParser extends Parser_1.Parser {
                                 this._errHandler.recoverInline(this);
                             }
                             else {
-                                if (this._input.LA(1) === Token_1.Token.EOF) {
+                                if (this._input.LA(1) === Token.EOF) {
                                     this.matchedEOF = true;
                                 }
                                 this._errHandler.reportMatch(this);
@@ -3775,7 +3751,7 @@ class SolidityParser extends Parser_1.Parser {
                                 this._errHandler.recoverInline(this);
                             }
                             else {
-                                if (this._input.LA(1) === Token_1.Token.EOF) {
+                                if (this._input.LA(1) === Token.EOF) {
                                     this.matchedEOF = true;
                                 }
                                 this._errHandler.reportMatch(this);
@@ -3820,7 +3796,7 @@ class SolidityParser extends Parser_1.Parser {
                 this.state = 913;
                 this._errHandler.sync(this);
                 _alt = this.interpreter.adaptivePredict(this._input, 94, this._ctx);
-                while (_alt !== 2 && _alt !== ATN_1.ATN.INVALID_ALT_NUMBER) {
+                while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
                     if (_alt === 1) {
                         if (this._parseListeners != null) {
                             this.triggerExitRuleEvent();
@@ -3858,7 +3834,7 @@ class SolidityParser extends Parser_1.Parser {
                                             this._errHandler.recoverInline(this);
                                         }
                                         else {
-                                            if (this._input.LA(1) === Token_1.Token.EOF) {
+                                            if (this._input.LA(1) === Token.EOF) {
                                                 this.matchedEOF = true;
                                             }
                                             this._errHandler.reportMatch(this);
@@ -3882,7 +3858,7 @@ class SolidityParser extends Parser_1.Parser {
                                             this._errHandler.recoverInline(this);
                                         }
                                         else {
-                                            if (this._input.LA(1) === Token_1.Token.EOF) {
+                                            if (this._input.LA(1) === Token.EOF) {
                                                 this.matchedEOF = true;
                                             }
                                             this._errHandler.reportMatch(this);
@@ -3906,7 +3882,7 @@ class SolidityParser extends Parser_1.Parser {
                                             this._errHandler.recoverInline(this);
                                         }
                                         else {
-                                            if (this._input.LA(1) === Token_1.Token.EOF) {
+                                            if (this._input.LA(1) === Token.EOF) {
                                                 this.matchedEOF = true;
                                             }
                                             this._errHandler.reportMatch(this);
@@ -3972,7 +3948,7 @@ class SolidityParser extends Parser_1.Parser {
                                             this._errHandler.recoverInline(this);
                                         }
                                         else {
-                                            if (this._input.LA(1) === Token_1.Token.EOF) {
+                                            if (this._input.LA(1) === Token.EOF) {
                                                 this.matchedEOF = true;
                                             }
                                             this._errHandler.reportMatch(this);
@@ -3996,7 +3972,7 @@ class SolidityParser extends Parser_1.Parser {
                                             this._errHandler.recoverInline(this);
                                         }
                                         else {
-                                            if (this._input.LA(1) === Token_1.Token.EOF) {
+                                            if (this._input.LA(1) === Token.EOF) {
                                                 this.matchedEOF = true;
                                             }
                                             this._errHandler.reportMatch(this);
@@ -4066,7 +4042,7 @@ class SolidityParser extends Parser_1.Parser {
                                             this._errHandler.recoverInline(this);
                                         }
                                         else {
-                                            if (this._input.LA(1) === Token_1.Token.EOF) {
+                                            if (this._input.LA(1) === Token.EOF) {
                                                 this.matchedEOF = true;
                                             }
                                             this._errHandler.reportMatch(this);
@@ -4090,7 +4066,7 @@ class SolidityParser extends Parser_1.Parser {
                                             this._errHandler.recoverInline(this);
                                         }
                                         else {
-                                            if (this._input.LA(1) === Token_1.Token.EOF) {
+                                            if (this._input.LA(1) === Token.EOF) {
                                                 this.matchedEOF = true;
                                             }
                                             this._errHandler.reportMatch(this);
@@ -4204,7 +4180,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -4292,7 +4268,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -4335,7 +4311,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -4363,7 +4339,7 @@ class SolidityParser extends Parser_1.Parser {
                 this.state = 940;
                 this._errHandler.sync(this);
                 _alt = this.interpreter.adaptivePredict(this._input, 97, this._ctx);
-                while (_alt !== 2 && _alt !== ATN_1.ATN.INVALID_ALT_NUMBER) {
+                while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
                     if (_alt === 1) {
                         {
                             {
@@ -4390,7 +4366,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -4420,7 +4396,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -4514,11 +4490,11 @@ class SolidityParser extends Parser_1.Parser {
                     }
                     break;
                 default:
-                    throw new NoViableAltException_1.NoViableAltException(this);
+                    throw new NoViableAltException(this);
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -4550,7 +4526,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -4593,7 +4569,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -4737,7 +4713,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -4783,7 +4759,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -4813,7 +4789,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -4903,7 +4879,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -4943,7 +4919,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -4973,7 +4949,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -5030,7 +5006,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -5073,7 +5049,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -5103,7 +5079,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -5131,7 +5107,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -5174,7 +5150,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -5217,11 +5193,11 @@ class SolidityParser extends Parser_1.Parser {
                     }
                     break;
                 default:
-                    throw new NoViableAltException_1.NoViableAltException(this);
+                    throw new NoViableAltException(this);
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -5274,7 +5250,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -5304,7 +5280,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -5360,7 +5336,7 @@ class SolidityParser extends Parser_1.Parser {
                         }
                         break;
                     default:
-                        throw new NoViableAltException_1.NoViableAltException(this);
+                        throw new NoViableAltException(this);
                 }
                 this.state = 1092;
                 this.assemblyExpression();
@@ -5397,14 +5373,14 @@ class SolidityParser extends Parser_1.Parser {
                         }
                         break;
                     default:
-                        throw new NoViableAltException_1.NoViableAltException(this);
+                        throw new NoViableAltException(this);
                 }
                 this.state = 1097;
                 this.assemblyBlock();
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -5434,7 +5410,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -5492,11 +5468,11 @@ class SolidityParser extends Parser_1.Parser {
                     }
                     break;
                 default:
-                    throw new NoViableAltException_1.NoViableAltException(this);
+                    throw new NoViableAltException(this);
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -5597,11 +5573,11 @@ class SolidityParser extends Parser_1.Parser {
                     }
                     break;
                 default:
-                    throw new NoViableAltException_1.NoViableAltException(this);
+                    throw new NoViableAltException(this);
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -5629,7 +5605,7 @@ class SolidityParser extends Parser_1.Parser {
                     this._errHandler.recoverInline(this);
                 }
                 else {
-                    if (this._input.LA(1) === Token_1.Token.EOF) {
+                    if (this._input.LA(1) === Token.EOF) {
                         this.matchedEOF = true;
                     }
                     this._errHandler.reportMatch(this);
@@ -5648,7 +5624,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -5676,7 +5652,7 @@ class SolidityParser extends Parser_1.Parser {
                     this._errHandler.recoverInline(this);
                 }
                 else {
-                    if (this._input.LA(1) === Token_1.Token.EOF) {
+                    if (this._input.LA(1) === Token.EOF) {
                         this.matchedEOF = true;
                     }
                     this._errHandler.reportMatch(this);
@@ -5685,7 +5661,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -5721,16 +5697,16 @@ class SolidityParser extends Parser_1.Parser {
                             }
                             break;
                         default:
-                            throw new NoViableAltException_1.NoViableAltException(this);
+                            throw new NoViableAltException(this);
                     }
                     this.state = 1147;
                     this._errHandler.sync(this);
                     _alt = this.interpreter.adaptivePredict(this._input, 126, this._ctx);
-                } while (_alt !== 2 && _alt !== ATN_1.ATN.INVALID_ALT_NUMBER);
+                } while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER);
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -5786,7 +5762,7 @@ class SolidityParser extends Parser_1.Parser {
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -5822,16 +5798,16 @@ class SolidityParser extends Parser_1.Parser {
                             }
                             break;
                         default:
-                            throw new NoViableAltException_1.NoViableAltException(this);
+                            throw new NoViableAltException(this);
                     }
                     this.state = 1166;
                     this._errHandler.sync(this);
                     _alt = this.interpreter.adaptivePredict(this._input, 129, this._ctx);
-                } while (_alt !== 2 && _alt !== ATN_1.ATN.INVALID_ALT_NUMBER);
+                } while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER);
             }
         }
         catch (re) {
-            if (re instanceof RecognitionException_1.RecognitionException) {
+            if (re instanceof RecognitionException) {
                 _localctx.exception = re;
                 this._errHandler.reportError(this, re);
                 this._errHandler.recover(this, re);
@@ -5906,12 +5882,11 @@ class SolidityParser extends Parser_1.Parser {
     }
     static get _ATN() {
         if (!SolidityParser.__ATN) {
-            SolidityParser.__ATN = new ATNDeserializer_1.ATNDeserializer().deserialize(Utils.toCharArray(SolidityParser._serializedATN));
+            SolidityParser.__ATN = new ATNDeserializer().deserialize(Utils.toCharArray(SolidityParser._serializedATN));
         }
         return SolidityParser.__ATN;
     }
 }
-exports.SolidityParser = SolidityParser;
 SolidityParser.T__0 = 1;
 SolidityParser.T__1 = 2;
 SolidityParser.T__2 = 3;
@@ -6218,7 +6193,7 @@ SolidityParser._SYMBOLIC_NAMES = [
     "FallbackKeyword", "ReceiveKeyword", "Identifier", "StringLiteralFragment",
     "VersionLiteral", "WS", "COMMENT", "LINE_COMMENT",
 ];
-SolidityParser.VOCABULARY = new VocabularyImpl_1.VocabularyImpl(SolidityParser._LITERAL_NAMES, SolidityParser._SYMBOLIC_NAMES, []);
+SolidityParser.VOCABULARY = new VocabularyImpl(SolidityParser._LITERAL_NAMES, SolidityParser._SYMBOLIC_NAMES, []);
 SolidityParser._serializedATNSegments = 3;
 SolidityParser._serializedATNSegment0 = "\x03\uC91D\uCABA\u058D\uAFBA\u4F53\u0607\uEA8B\uC241\x03\x87\u0493\x04" +
     "\x02\t\x02\x04\x03\t\x03\x04\x04\t\x04\x04\x05\t\x05\x04\x06\t\x06\x04" +
@@ -6830,7 +6805,7 @@ SolidityParser._serializedATN = Utils.join([
     SolidityParser._serializedATNSegment1,
     SolidityParser._serializedATNSegment2,
 ], "");
-class SourceUnitContext extends ParserRuleContext_1.ParserRuleContext {
+export class SourceUnitContext extends ParserRuleContext {
     EOF() { return this.getToken(SolidityParser.EOF, 0); }
     pragmaDirective(i) {
         if (i === undefined) {
@@ -6939,8 +6914,7 @@ class SourceUnitContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.SourceUnitContext = SourceUnitContext;
-class PragmaDirectiveContext extends ParserRuleContext_1.ParserRuleContext {
+export class PragmaDirectiveContext extends ParserRuleContext {
     pragmaName() {
         return this.getRuleContext(0, PragmaNameContext);
     }
@@ -6974,8 +6948,7 @@ class PragmaDirectiveContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.PragmaDirectiveContext = PragmaDirectiveContext;
-class PragmaNameContext extends ParserRuleContext_1.ParserRuleContext {
+export class PragmaNameContext extends ParserRuleContext {
     identifier() {
         return this.getRuleContext(0, IdentifierContext);
     }
@@ -7006,8 +6979,7 @@ class PragmaNameContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.PragmaNameContext = PragmaNameContext;
-class PragmaValueContext extends ParserRuleContext_1.ParserRuleContext {
+export class PragmaValueContext extends ParserRuleContext {
     version() {
         return this.tryGetRuleContext(0, VersionContext);
     }
@@ -7041,8 +7013,7 @@ class PragmaValueContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.PragmaValueContext = PragmaValueContext;
-class VersionContext extends ParserRuleContext_1.ParserRuleContext {
+export class VersionContext extends ParserRuleContext {
     versionConstraint(i) {
         if (i === undefined) {
             return this.getRuleContexts(VersionConstraintContext);
@@ -7078,8 +7049,7 @@ class VersionContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.VersionContext = VersionContext;
-class VersionOperatorContext extends ParserRuleContext_1.ParserRuleContext {
+export class VersionOperatorContext extends ParserRuleContext {
     constructor(parent, invokingState) {
         super(parent, invokingState);
     }
@@ -7107,8 +7077,7 @@ class VersionOperatorContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.VersionOperatorContext = VersionOperatorContext;
-class VersionConstraintContext extends ParserRuleContext_1.ParserRuleContext {
+export class VersionConstraintContext extends ParserRuleContext {
     VersionLiteral() { return this.tryGetToken(SolidityParser.VersionLiteral, 0); }
     versionOperator() {
         return this.tryGetRuleContext(0, VersionOperatorContext);
@@ -7141,8 +7110,7 @@ class VersionConstraintContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.VersionConstraintContext = VersionConstraintContext;
-class ImportDeclarationContext extends ParserRuleContext_1.ParserRuleContext {
+export class ImportDeclarationContext extends ParserRuleContext {
     identifier(i) {
         if (i === undefined) {
             return this.getRuleContexts(IdentifierContext);
@@ -7178,8 +7146,7 @@ class ImportDeclarationContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.ImportDeclarationContext = ImportDeclarationContext;
-class ImportDirectiveContext extends ParserRuleContext_1.ParserRuleContext {
+export class ImportDirectiveContext extends ParserRuleContext {
     importPath() {
         return this.getRuleContext(0, ImportPathContext);
     }
@@ -7226,8 +7193,7 @@ class ImportDirectiveContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.ImportDirectiveContext = ImportDirectiveContext;
-class ImportPathContext extends ParserRuleContext_1.ParserRuleContext {
+export class ImportPathContext extends ParserRuleContext {
     StringLiteralFragment() { return this.getToken(SolidityParser.StringLiteralFragment, 0); }
     constructor(parent, invokingState) {
         super(parent, invokingState);
@@ -7256,8 +7222,7 @@ class ImportPathContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.ImportPathContext = ImportPathContext;
-class ContractDefinitionContext extends ParserRuleContext_1.ParserRuleContext {
+export class ContractDefinitionContext extends ParserRuleContext {
     identifier() {
         return this.getRuleContext(0, IdentifierContext);
     }
@@ -7304,8 +7269,7 @@ class ContractDefinitionContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.ContractDefinitionContext = ContractDefinitionContext;
-class InheritanceSpecifierContext extends ParserRuleContext_1.ParserRuleContext {
+export class InheritanceSpecifierContext extends ParserRuleContext {
     userDefinedTypeName() {
         return this.getRuleContext(0, UserDefinedTypeNameContext);
     }
@@ -7339,8 +7303,7 @@ class InheritanceSpecifierContext extends ParserRuleContext_1.ParserRuleContext 
         }
     }
 }
-exports.InheritanceSpecifierContext = InheritanceSpecifierContext;
-class ContractPartContext extends ParserRuleContext_1.ParserRuleContext {
+export class ContractPartContext extends ParserRuleContext {
     stateVariableDeclaration() {
         return this.tryGetRuleContext(0, StateVariableDeclarationContext);
     }
@@ -7395,8 +7358,7 @@ class ContractPartContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.ContractPartContext = ContractPartContext;
-class StateVariableDeclarationContext extends ParserRuleContext_1.ParserRuleContext {
+export class StateVariableDeclarationContext extends ParserRuleContext {
     typeName() {
         return this.getRuleContext(0, TypeNameContext);
     }
@@ -7481,8 +7443,7 @@ class StateVariableDeclarationContext extends ParserRuleContext_1.ParserRuleCont
         }
     }
 }
-exports.StateVariableDeclarationContext = StateVariableDeclarationContext;
-class FileLevelConstantContext extends ParserRuleContext_1.ParserRuleContext {
+export class FileLevelConstantContext extends ParserRuleContext {
     typeName() {
         return this.getRuleContext(0, TypeNameContext);
     }
@@ -7520,8 +7481,7 @@ class FileLevelConstantContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.FileLevelConstantContext = FileLevelConstantContext;
-class CustomErrorDefinitionContext extends ParserRuleContext_1.ParserRuleContext {
+export class CustomErrorDefinitionContext extends ParserRuleContext {
     identifier() {
         return this.getRuleContext(0, IdentifierContext);
     }
@@ -7555,8 +7515,7 @@ class CustomErrorDefinitionContext extends ParserRuleContext_1.ParserRuleContext
         }
     }
 }
-exports.CustomErrorDefinitionContext = CustomErrorDefinitionContext;
-class TypeDefinitionContext extends ParserRuleContext_1.ParserRuleContext {
+export class TypeDefinitionContext extends ParserRuleContext {
     TypeKeyword() { return this.getToken(SolidityParser.TypeKeyword, 0); }
     identifier() {
         return this.getRuleContext(0, IdentifierContext);
@@ -7591,8 +7550,7 @@ class TypeDefinitionContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.TypeDefinitionContext = TypeDefinitionContext;
-class UsingForDeclarationContext extends ParserRuleContext_1.ParserRuleContext {
+export class UsingForDeclarationContext extends ParserRuleContext {
     usingForObject() {
         return this.getRuleContext(0, UsingForObjectContext);
     }
@@ -7627,8 +7585,7 @@ class UsingForDeclarationContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.UsingForDeclarationContext = UsingForDeclarationContext;
-class UsingForObjectContext extends ParserRuleContext_1.ParserRuleContext {
+export class UsingForObjectContext extends ParserRuleContext {
     userDefinedTypeName() {
         return this.tryGetRuleContext(0, UserDefinedTypeNameContext);
     }
@@ -7667,8 +7624,7 @@ class UsingForObjectContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.UsingForObjectContext = UsingForObjectContext;
-class UsingForObjectDirectiveContext extends ParserRuleContext_1.ParserRuleContext {
+export class UsingForObjectDirectiveContext extends ParserRuleContext {
     userDefinedTypeName() {
         return this.getRuleContext(0, UserDefinedTypeNameContext);
     }
@@ -7702,8 +7658,7 @@ class UsingForObjectDirectiveContext extends ParserRuleContext_1.ParserRuleConte
         }
     }
 }
-exports.UsingForObjectDirectiveContext = UsingForObjectDirectiveContext;
-class UserDefinableOperatorsContext extends ParserRuleContext_1.ParserRuleContext {
+export class UserDefinableOperatorsContext extends ParserRuleContext {
     constructor(parent, invokingState) {
         super(parent, invokingState);
     }
@@ -7731,8 +7686,7 @@ class UserDefinableOperatorsContext extends ParserRuleContext_1.ParserRuleContex
         }
     }
 }
-exports.UserDefinableOperatorsContext = UserDefinableOperatorsContext;
-class StructDefinitionContext extends ParserRuleContext_1.ParserRuleContext {
+export class StructDefinitionContext extends ParserRuleContext {
     identifier() {
         return this.getRuleContext(0, IdentifierContext);
     }
@@ -7771,8 +7725,7 @@ class StructDefinitionContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.StructDefinitionContext = StructDefinitionContext;
-class ModifierDefinitionContext extends ParserRuleContext_1.ParserRuleContext {
+export class ModifierDefinitionContext extends ParserRuleContext {
     identifier() {
         return this.getRuleContext(0, IdentifierContext);
     }
@@ -7825,8 +7778,7 @@ class ModifierDefinitionContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.ModifierDefinitionContext = ModifierDefinitionContext;
-class ModifierInvocationContext extends ParserRuleContext_1.ParserRuleContext {
+export class ModifierInvocationContext extends ParserRuleContext {
     identifier() {
         return this.getRuleContext(0, IdentifierContext);
     }
@@ -7860,8 +7812,7 @@ class ModifierInvocationContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.ModifierInvocationContext = ModifierInvocationContext;
-class FunctionDefinitionContext extends ParserRuleContext_1.ParserRuleContext {
+export class FunctionDefinitionContext extends ParserRuleContext {
     functionDescriptor() {
         return this.getRuleContext(0, FunctionDescriptorContext);
     }
@@ -7904,8 +7855,7 @@ class FunctionDefinitionContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.FunctionDefinitionContext = FunctionDefinitionContext;
-class FunctionDescriptorContext extends ParserRuleContext_1.ParserRuleContext {
+export class FunctionDescriptorContext extends ParserRuleContext {
     identifier() {
         return this.tryGetRuleContext(0, IdentifierContext);
     }
@@ -7939,8 +7889,7 @@ class FunctionDescriptorContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.FunctionDescriptorContext = FunctionDescriptorContext;
-class ReturnParametersContext extends ParserRuleContext_1.ParserRuleContext {
+export class ReturnParametersContext extends ParserRuleContext {
     parameterList() {
         return this.getRuleContext(0, ParameterListContext);
     }
@@ -7971,8 +7920,7 @@ class ReturnParametersContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.ReturnParametersContext = ReturnParametersContext;
-class ModifierListContext extends ParserRuleContext_1.ParserRuleContext {
+export class ModifierListContext extends ParserRuleContext {
     ExternalKeyword(i) {
         if (i === undefined) {
             return this.getTokens(SolidityParser.ExternalKeyword);
@@ -8064,8 +8012,7 @@ class ModifierListContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.ModifierListContext = ModifierListContext;
-class EventDefinitionContext extends ParserRuleContext_1.ParserRuleContext {
+export class EventDefinitionContext extends ParserRuleContext {
     identifier() {
         return this.getRuleContext(0, IdentifierContext);
     }
@@ -8100,8 +8047,7 @@ class EventDefinitionContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.EventDefinitionContext = EventDefinitionContext;
-class EnumValueContext extends ParserRuleContext_1.ParserRuleContext {
+export class EnumValueContext extends ParserRuleContext {
     identifier() {
         return this.getRuleContext(0, IdentifierContext);
     }
@@ -8132,8 +8078,7 @@ class EnumValueContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.EnumValueContext = EnumValueContext;
-class EnumDefinitionContext extends ParserRuleContext_1.ParserRuleContext {
+export class EnumDefinitionContext extends ParserRuleContext {
     identifier() {
         return this.getRuleContext(0, IdentifierContext);
     }
@@ -8172,8 +8117,7 @@ class EnumDefinitionContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.EnumDefinitionContext = EnumDefinitionContext;
-class ParameterListContext extends ParserRuleContext_1.ParserRuleContext {
+export class ParameterListContext extends ParserRuleContext {
     parameter(i) {
         if (i === undefined) {
             return this.getRuleContexts(ParameterContext);
@@ -8209,8 +8153,7 @@ class ParameterListContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.ParameterListContext = ParameterListContext;
-class ParameterContext extends ParserRuleContext_1.ParserRuleContext {
+export class ParameterContext extends ParserRuleContext {
     typeName() {
         return this.getRuleContext(0, TypeNameContext);
     }
@@ -8247,8 +8190,7 @@ class ParameterContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.ParameterContext = ParameterContext;
-class EventParameterListContext extends ParserRuleContext_1.ParserRuleContext {
+export class EventParameterListContext extends ParserRuleContext {
     eventParameter(i) {
         if (i === undefined) {
             return this.getRuleContexts(EventParameterContext);
@@ -8284,8 +8226,7 @@ class EventParameterListContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.EventParameterListContext = EventParameterListContext;
-class EventParameterContext extends ParserRuleContext_1.ParserRuleContext {
+export class EventParameterContext extends ParserRuleContext {
     typeName() {
         return this.getRuleContext(0, TypeNameContext);
     }
@@ -8320,8 +8261,7 @@ class EventParameterContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.EventParameterContext = EventParameterContext;
-class FunctionTypeParameterListContext extends ParserRuleContext_1.ParserRuleContext {
+export class FunctionTypeParameterListContext extends ParserRuleContext {
     functionTypeParameter(i) {
         if (i === undefined) {
             return this.getRuleContexts(FunctionTypeParameterContext);
@@ -8357,8 +8297,7 @@ class FunctionTypeParameterListContext extends ParserRuleContext_1.ParserRuleCon
         }
     }
 }
-exports.FunctionTypeParameterListContext = FunctionTypeParameterListContext;
-class FunctionTypeParameterContext extends ParserRuleContext_1.ParserRuleContext {
+export class FunctionTypeParameterContext extends ParserRuleContext {
     typeName() {
         return this.getRuleContext(0, TypeNameContext);
     }
@@ -8392,8 +8331,7 @@ class FunctionTypeParameterContext extends ParserRuleContext_1.ParserRuleContext
         }
     }
 }
-exports.FunctionTypeParameterContext = FunctionTypeParameterContext;
-class VariableDeclarationContext extends ParserRuleContext_1.ParserRuleContext {
+export class VariableDeclarationContext extends ParserRuleContext {
     typeName() {
         return this.getRuleContext(0, TypeNameContext);
     }
@@ -8430,8 +8368,7 @@ class VariableDeclarationContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.VariableDeclarationContext = VariableDeclarationContext;
-class TypeNameContext extends ParserRuleContext_1.ParserRuleContext {
+export class TypeNameContext extends ParserRuleContext {
     elementaryTypeName() {
         return this.tryGetRuleContext(0, ElementaryTypeNameContext);
     }
@@ -8478,8 +8415,7 @@ class TypeNameContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.TypeNameContext = TypeNameContext;
-class UserDefinedTypeNameContext extends ParserRuleContext_1.ParserRuleContext {
+export class UserDefinedTypeNameContext extends ParserRuleContext {
     identifier(i) {
         if (i === undefined) {
             return this.getRuleContexts(IdentifierContext);
@@ -8515,8 +8451,7 @@ class UserDefinedTypeNameContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.UserDefinedTypeNameContext = UserDefinedTypeNameContext;
-class MappingKeyContext extends ParserRuleContext_1.ParserRuleContext {
+export class MappingKeyContext extends ParserRuleContext {
     elementaryTypeName() {
         return this.tryGetRuleContext(0, ElementaryTypeNameContext);
     }
@@ -8550,8 +8485,7 @@ class MappingKeyContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.MappingKeyContext = MappingKeyContext;
-class MappingContext extends ParserRuleContext_1.ParserRuleContext {
+export class MappingContext extends ParserRuleContext {
     mappingKey() {
         return this.getRuleContext(0, MappingKeyContext);
     }
@@ -8591,8 +8525,7 @@ class MappingContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.MappingContext = MappingContext;
-class MappingKeyNameContext extends ParserRuleContext_1.ParserRuleContext {
+export class MappingKeyNameContext extends ParserRuleContext {
     identifier() {
         return this.getRuleContext(0, IdentifierContext);
     }
@@ -8623,8 +8556,7 @@ class MappingKeyNameContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.MappingKeyNameContext = MappingKeyNameContext;
-class MappingValueNameContext extends ParserRuleContext_1.ParserRuleContext {
+export class MappingValueNameContext extends ParserRuleContext {
     identifier() {
         return this.getRuleContext(0, IdentifierContext);
     }
@@ -8655,8 +8587,7 @@ class MappingValueNameContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.MappingValueNameContext = MappingValueNameContext;
-class FunctionTypeNameContext extends ParserRuleContext_1.ParserRuleContext {
+export class FunctionTypeNameContext extends ParserRuleContext {
     functionTypeParameterList(i) {
         if (i === undefined) {
             return this.getRuleContexts(FunctionTypeParameterListContext);
@@ -8716,8 +8647,7 @@ class FunctionTypeNameContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.FunctionTypeNameContext = FunctionTypeNameContext;
-class StorageLocationContext extends ParserRuleContext_1.ParserRuleContext {
+export class StorageLocationContext extends ParserRuleContext {
     constructor(parent, invokingState) {
         super(parent, invokingState);
     }
@@ -8745,8 +8675,7 @@ class StorageLocationContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.StorageLocationContext = StorageLocationContext;
-class StateMutabilityContext extends ParserRuleContext_1.ParserRuleContext {
+export class StateMutabilityContext extends ParserRuleContext {
     PureKeyword() { return this.tryGetToken(SolidityParser.PureKeyword, 0); }
     ConstantKeyword() { return this.tryGetToken(SolidityParser.ConstantKeyword, 0); }
     ViewKeyword() { return this.tryGetToken(SolidityParser.ViewKeyword, 0); }
@@ -8778,8 +8707,7 @@ class StateMutabilityContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.StateMutabilityContext = StateMutabilityContext;
-class BlockContext extends ParserRuleContext_1.ParserRuleContext {
+export class BlockContext extends ParserRuleContext {
     statement(i) {
         if (i === undefined) {
             return this.getRuleContexts(StatementContext);
@@ -8815,8 +8743,7 @@ class BlockContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.BlockContext = BlockContext;
-class StatementContext extends ParserRuleContext_1.ParserRuleContext {
+export class StatementContext extends ParserRuleContext {
     ifStatement() {
         return this.tryGetRuleContext(0, IfStatementContext);
     }
@@ -8889,8 +8816,7 @@ class StatementContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.StatementContext = StatementContext;
-class ExpressionStatementContext extends ParserRuleContext_1.ParserRuleContext {
+export class ExpressionStatementContext extends ParserRuleContext {
     expression() {
         return this.getRuleContext(0, ExpressionContext);
     }
@@ -8921,8 +8847,7 @@ class ExpressionStatementContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.ExpressionStatementContext = ExpressionStatementContext;
-class IfStatementContext extends ParserRuleContext_1.ParserRuleContext {
+export class IfStatementContext extends ParserRuleContext {
     expression() {
         return this.getRuleContext(0, ExpressionContext);
     }
@@ -8961,8 +8886,7 @@ class IfStatementContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.IfStatementContext = IfStatementContext;
-class TryStatementContext extends ParserRuleContext_1.ParserRuleContext {
+export class TryStatementContext extends ParserRuleContext {
     expression() {
         return this.getRuleContext(0, ExpressionContext);
     }
@@ -9007,8 +8931,7 @@ class TryStatementContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.TryStatementContext = TryStatementContext;
-class CatchClauseContext extends ParserRuleContext_1.ParserRuleContext {
+export class CatchClauseContext extends ParserRuleContext {
     block() {
         return this.getRuleContext(0, BlockContext);
     }
@@ -9045,8 +8968,7 @@ class CatchClauseContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.CatchClauseContext = CatchClauseContext;
-class WhileStatementContext extends ParserRuleContext_1.ParserRuleContext {
+export class WhileStatementContext extends ParserRuleContext {
     expression() {
         return this.getRuleContext(0, ExpressionContext);
     }
@@ -9080,8 +9002,7 @@ class WhileStatementContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.WhileStatementContext = WhileStatementContext;
-class SimpleStatementContext extends ParserRuleContext_1.ParserRuleContext {
+export class SimpleStatementContext extends ParserRuleContext {
     variableDeclarationStatement() {
         return this.tryGetRuleContext(0, VariableDeclarationStatementContext);
     }
@@ -9115,8 +9036,7 @@ class SimpleStatementContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.SimpleStatementContext = SimpleStatementContext;
-class UncheckedStatementContext extends ParserRuleContext_1.ParserRuleContext {
+export class UncheckedStatementContext extends ParserRuleContext {
     block() {
         return this.getRuleContext(0, BlockContext);
     }
@@ -9147,8 +9067,7 @@ class UncheckedStatementContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.UncheckedStatementContext = UncheckedStatementContext;
-class ForStatementContext extends ParserRuleContext_1.ParserRuleContext {
+export class ForStatementContext extends ParserRuleContext {
     statement() {
         return this.getRuleContext(0, StatementContext);
     }
@@ -9188,8 +9107,7 @@ class ForStatementContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.ForStatementContext = ForStatementContext;
-class InlineAssemblyStatementContext extends ParserRuleContext_1.ParserRuleContext {
+export class InlineAssemblyStatementContext extends ParserRuleContext {
     assemblyBlock() {
         return this.getRuleContext(0, AssemblyBlockContext);
     }
@@ -9224,8 +9142,7 @@ class InlineAssemblyStatementContext extends ParserRuleContext_1.ParserRuleConte
         }
     }
 }
-exports.InlineAssemblyStatementContext = InlineAssemblyStatementContext;
-class InlineAssemblyStatementFlagContext extends ParserRuleContext_1.ParserRuleContext {
+export class InlineAssemblyStatementFlagContext extends ParserRuleContext {
     stringLiteral() {
         return this.getRuleContext(0, StringLiteralContext);
     }
@@ -9256,8 +9173,7 @@ class InlineAssemblyStatementFlagContext extends ParserRuleContext_1.ParserRuleC
         }
     }
 }
-exports.InlineAssemblyStatementFlagContext = InlineAssemblyStatementFlagContext;
-class DoWhileStatementContext extends ParserRuleContext_1.ParserRuleContext {
+export class DoWhileStatementContext extends ParserRuleContext {
     statement() {
         return this.getRuleContext(0, StatementContext);
     }
@@ -9291,8 +9207,7 @@ class DoWhileStatementContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.DoWhileStatementContext = DoWhileStatementContext;
-class ContinueStatementContext extends ParserRuleContext_1.ParserRuleContext {
+export class ContinueStatementContext extends ParserRuleContext {
     ContinueKeyword() { return this.getToken(SolidityParser.ContinueKeyword, 0); }
     constructor(parent, invokingState) {
         super(parent, invokingState);
@@ -9321,8 +9236,7 @@ class ContinueStatementContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.ContinueStatementContext = ContinueStatementContext;
-class BreakStatementContext extends ParserRuleContext_1.ParserRuleContext {
+export class BreakStatementContext extends ParserRuleContext {
     BreakKeyword() { return this.getToken(SolidityParser.BreakKeyword, 0); }
     constructor(parent, invokingState) {
         super(parent, invokingState);
@@ -9351,8 +9265,7 @@ class BreakStatementContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.BreakStatementContext = BreakStatementContext;
-class ReturnStatementContext extends ParserRuleContext_1.ParserRuleContext {
+export class ReturnStatementContext extends ParserRuleContext {
     expression() {
         return this.tryGetRuleContext(0, ExpressionContext);
     }
@@ -9383,8 +9296,7 @@ class ReturnStatementContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.ReturnStatementContext = ReturnStatementContext;
-class ThrowStatementContext extends ParserRuleContext_1.ParserRuleContext {
+export class ThrowStatementContext extends ParserRuleContext {
     constructor(parent, invokingState) {
         super(parent, invokingState);
     }
@@ -9412,8 +9324,7 @@ class ThrowStatementContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.ThrowStatementContext = ThrowStatementContext;
-class EmitStatementContext extends ParserRuleContext_1.ParserRuleContext {
+export class EmitStatementContext extends ParserRuleContext {
     functionCall() {
         return this.getRuleContext(0, FunctionCallContext);
     }
@@ -9444,8 +9355,7 @@ class EmitStatementContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.EmitStatementContext = EmitStatementContext;
-class RevertStatementContext extends ParserRuleContext_1.ParserRuleContext {
+export class RevertStatementContext extends ParserRuleContext {
     functionCall() {
         return this.getRuleContext(0, FunctionCallContext);
     }
@@ -9476,8 +9386,7 @@ class RevertStatementContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.RevertStatementContext = RevertStatementContext;
-class VariableDeclarationStatementContext extends ParserRuleContext_1.ParserRuleContext {
+export class VariableDeclarationStatementContext extends ParserRuleContext {
     identifierList() {
         return this.tryGetRuleContext(0, IdentifierListContext);
     }
@@ -9517,8 +9426,7 @@ class VariableDeclarationStatementContext extends ParserRuleContext_1.ParserRule
         }
     }
 }
-exports.VariableDeclarationStatementContext = VariableDeclarationStatementContext;
-class VariableDeclarationListContext extends ParserRuleContext_1.ParserRuleContext {
+export class VariableDeclarationListContext extends ParserRuleContext {
     variableDeclaration(i) {
         if (i === undefined) {
             return this.getRuleContexts(VariableDeclarationContext);
@@ -9554,8 +9462,7 @@ class VariableDeclarationListContext extends ParserRuleContext_1.ParserRuleConte
         }
     }
 }
-exports.VariableDeclarationListContext = VariableDeclarationListContext;
-class IdentifierListContext extends ParserRuleContext_1.ParserRuleContext {
+export class IdentifierListContext extends ParserRuleContext {
     identifier(i) {
         if (i === undefined) {
             return this.getRuleContexts(IdentifierContext);
@@ -9591,8 +9498,7 @@ class IdentifierListContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.IdentifierListContext = IdentifierListContext;
-class ElementaryTypeNameContext extends ParserRuleContext_1.ParserRuleContext {
+export class ElementaryTypeNameContext extends ParserRuleContext {
     Int() { return this.tryGetToken(SolidityParser.Int, 0); }
     Uint() { return this.tryGetToken(SolidityParser.Uint, 0); }
     Byte() { return this.tryGetToken(SolidityParser.Byte, 0); }
@@ -9625,8 +9531,7 @@ class ElementaryTypeNameContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.ElementaryTypeNameContext = ElementaryTypeNameContext;
-class ExpressionContext extends ParserRuleContext_1.ParserRuleContext {
+export class ExpressionContext extends ParserRuleContext {
     expression(i) {
         if (i === undefined) {
             return this.getRuleContexts(ExpressionContext);
@@ -9677,8 +9582,7 @@ class ExpressionContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.ExpressionContext = ExpressionContext;
-class PrimaryExpressionContext extends ParserRuleContext_1.ParserRuleContext {
+export class PrimaryExpressionContext extends ParserRuleContext {
     BooleanLiteral() { return this.tryGetToken(SolidityParser.BooleanLiteral, 0); }
     numberLiteral() {
         return this.tryGetRuleContext(0, NumberLiteralContext);
@@ -9727,8 +9631,7 @@ class PrimaryExpressionContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.PrimaryExpressionContext = PrimaryExpressionContext;
-class ExpressionListContext extends ParserRuleContext_1.ParserRuleContext {
+export class ExpressionListContext extends ParserRuleContext {
     expression(i) {
         if (i === undefined) {
             return this.getRuleContexts(ExpressionContext);
@@ -9764,8 +9667,7 @@ class ExpressionListContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.ExpressionListContext = ExpressionListContext;
-class NameValueListContext extends ParserRuleContext_1.ParserRuleContext {
+export class NameValueListContext extends ParserRuleContext {
     nameValue(i) {
         if (i === undefined) {
             return this.getRuleContexts(NameValueContext);
@@ -9801,8 +9703,7 @@ class NameValueListContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.NameValueListContext = NameValueListContext;
-class NameValueContext extends ParserRuleContext_1.ParserRuleContext {
+export class NameValueContext extends ParserRuleContext {
     identifier() {
         return this.getRuleContext(0, IdentifierContext);
     }
@@ -9836,8 +9737,7 @@ class NameValueContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.NameValueContext = NameValueContext;
-class FunctionCallArgumentsContext extends ParserRuleContext_1.ParserRuleContext {
+export class FunctionCallArgumentsContext extends ParserRuleContext {
     nameValueList() {
         return this.tryGetRuleContext(0, NameValueListContext);
     }
@@ -9871,8 +9771,7 @@ class FunctionCallArgumentsContext extends ParserRuleContext_1.ParserRuleContext
         }
     }
 }
-exports.FunctionCallArgumentsContext = FunctionCallArgumentsContext;
-class FunctionCallContext extends ParserRuleContext_1.ParserRuleContext {
+export class FunctionCallContext extends ParserRuleContext {
     expression() {
         return this.getRuleContext(0, ExpressionContext);
     }
@@ -9906,8 +9805,7 @@ class FunctionCallContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.FunctionCallContext = FunctionCallContext;
-class AssemblyBlockContext extends ParserRuleContext_1.ParserRuleContext {
+export class AssemblyBlockContext extends ParserRuleContext {
     assemblyItem(i) {
         if (i === undefined) {
             return this.getRuleContexts(AssemblyItemContext);
@@ -9943,8 +9841,7 @@ class AssemblyBlockContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.AssemblyBlockContext = AssemblyBlockContext;
-class AssemblyItemContext extends ParserRuleContext_1.ParserRuleContext {
+export class AssemblyItemContext extends ParserRuleContext {
     identifier() {
         return this.tryGetRuleContext(0, IdentifierContext);
     }
@@ -10017,8 +9914,7 @@ class AssemblyItemContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.AssemblyItemContext = AssemblyItemContext;
-class AssemblyExpressionContext extends ParserRuleContext_1.ParserRuleContext {
+export class AssemblyExpressionContext extends ParserRuleContext {
     assemblyCall() {
         return this.tryGetRuleContext(0, AssemblyCallContext);
     }
@@ -10055,8 +9951,7 @@ class AssemblyExpressionContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.AssemblyExpressionContext = AssemblyExpressionContext;
-class AssemblyMemberContext extends ParserRuleContext_1.ParserRuleContext {
+export class AssemblyMemberContext extends ParserRuleContext {
     identifier(i) {
         if (i === undefined) {
             return this.getRuleContexts(IdentifierContext);
@@ -10092,8 +9987,7 @@ class AssemblyMemberContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.AssemblyMemberContext = AssemblyMemberContext;
-class AssemblyCallContext extends ParserRuleContext_1.ParserRuleContext {
+export class AssemblyCallContext extends ParserRuleContext {
     identifier() {
         return this.tryGetRuleContext(0, IdentifierContext);
     }
@@ -10132,8 +10026,7 @@ class AssemblyCallContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.AssemblyCallContext = AssemblyCallContext;
-class AssemblyLocalDefinitionContext extends ParserRuleContext_1.ParserRuleContext {
+export class AssemblyLocalDefinitionContext extends ParserRuleContext {
     assemblyIdentifierOrList() {
         return this.getRuleContext(0, AssemblyIdentifierOrListContext);
     }
@@ -10167,8 +10060,7 @@ class AssemblyLocalDefinitionContext extends ParserRuleContext_1.ParserRuleConte
         }
     }
 }
-exports.AssemblyLocalDefinitionContext = AssemblyLocalDefinitionContext;
-class AssemblyAssignmentContext extends ParserRuleContext_1.ParserRuleContext {
+export class AssemblyAssignmentContext extends ParserRuleContext {
     assemblyIdentifierOrList() {
         return this.getRuleContext(0, AssemblyIdentifierOrListContext);
     }
@@ -10202,8 +10094,7 @@ class AssemblyAssignmentContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.AssemblyAssignmentContext = AssemblyAssignmentContext;
-class AssemblyIdentifierOrListContext extends ParserRuleContext_1.ParserRuleContext {
+export class AssemblyIdentifierOrListContext extends ParserRuleContext {
     identifier() {
         return this.tryGetRuleContext(0, IdentifierContext);
     }
@@ -10240,8 +10131,7 @@ class AssemblyIdentifierOrListContext extends ParserRuleContext_1.ParserRuleCont
         }
     }
 }
-exports.AssemblyIdentifierOrListContext = AssemblyIdentifierOrListContext;
-class AssemblyIdentifierListContext extends ParserRuleContext_1.ParserRuleContext {
+export class AssemblyIdentifierListContext extends ParserRuleContext {
     identifier(i) {
         if (i === undefined) {
             return this.getRuleContexts(IdentifierContext);
@@ -10277,8 +10167,7 @@ class AssemblyIdentifierListContext extends ParserRuleContext_1.ParserRuleContex
         }
     }
 }
-exports.AssemblyIdentifierListContext = AssemblyIdentifierListContext;
-class AssemblyStackAssignmentContext extends ParserRuleContext_1.ParserRuleContext {
+export class AssemblyStackAssignmentContext extends ParserRuleContext {
     assemblyExpression() {
         return this.getRuleContext(0, AssemblyExpressionContext);
     }
@@ -10312,8 +10201,7 @@ class AssemblyStackAssignmentContext extends ParserRuleContext_1.ParserRuleConte
         }
     }
 }
-exports.AssemblyStackAssignmentContext = AssemblyStackAssignmentContext;
-class LabelDefinitionContext extends ParserRuleContext_1.ParserRuleContext {
+export class LabelDefinitionContext extends ParserRuleContext {
     identifier() {
         return this.getRuleContext(0, IdentifierContext);
     }
@@ -10344,8 +10232,7 @@ class LabelDefinitionContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.LabelDefinitionContext = LabelDefinitionContext;
-class AssemblySwitchContext extends ParserRuleContext_1.ParserRuleContext {
+export class AssemblySwitchContext extends ParserRuleContext {
     assemblyExpression() {
         return this.getRuleContext(0, AssemblyExpressionContext);
     }
@@ -10384,8 +10271,7 @@ class AssemblySwitchContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.AssemblySwitchContext = AssemblySwitchContext;
-class AssemblyCaseContext extends ParserRuleContext_1.ParserRuleContext {
+export class AssemblyCaseContext extends ParserRuleContext {
     assemblyLiteral() {
         return this.tryGetRuleContext(0, AssemblyLiteralContext);
     }
@@ -10419,8 +10305,7 @@ class AssemblyCaseContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.AssemblyCaseContext = AssemblyCaseContext;
-class AssemblyFunctionDefinitionContext extends ParserRuleContext_1.ParserRuleContext {
+export class AssemblyFunctionDefinitionContext extends ParserRuleContext {
     identifier() {
         return this.getRuleContext(0, IdentifierContext);
     }
@@ -10460,8 +10345,7 @@ class AssemblyFunctionDefinitionContext extends ParserRuleContext_1.ParserRuleCo
         }
     }
 }
-exports.AssemblyFunctionDefinitionContext = AssemblyFunctionDefinitionContext;
-class AssemblyFunctionReturnsContext extends ParserRuleContext_1.ParserRuleContext {
+export class AssemblyFunctionReturnsContext extends ParserRuleContext {
     assemblyIdentifierList() {
         return this.tryGetRuleContext(0, AssemblyIdentifierListContext);
     }
@@ -10492,8 +10376,7 @@ class AssemblyFunctionReturnsContext extends ParserRuleContext_1.ParserRuleConte
         }
     }
 }
-exports.AssemblyFunctionReturnsContext = AssemblyFunctionReturnsContext;
-class AssemblyForContext extends ParserRuleContext_1.ParserRuleContext {
+export class AssemblyForContext extends ParserRuleContext {
     assemblyExpression(i) {
         if (i === undefined) {
             return this.getRuleContexts(AssemblyExpressionContext);
@@ -10537,8 +10420,7 @@ class AssemblyForContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.AssemblyForContext = AssemblyForContext;
-class AssemblyIfContext extends ParserRuleContext_1.ParserRuleContext {
+export class AssemblyIfContext extends ParserRuleContext {
     assemblyExpression() {
         return this.getRuleContext(0, AssemblyExpressionContext);
     }
@@ -10572,8 +10454,7 @@ class AssemblyIfContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.AssemblyIfContext = AssemblyIfContext;
-class AssemblyLiteralContext extends ParserRuleContext_1.ParserRuleContext {
+export class AssemblyLiteralContext extends ParserRuleContext {
     stringLiteral() {
         return this.tryGetRuleContext(0, StringLiteralContext);
     }
@@ -10610,8 +10491,7 @@ class AssemblyLiteralContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.AssemblyLiteralContext = AssemblyLiteralContext;
-class TupleExpressionContext extends ParserRuleContext_1.ParserRuleContext {
+export class TupleExpressionContext extends ParserRuleContext {
     expression(i) {
         if (i === undefined) {
             return this.getRuleContexts(ExpressionContext);
@@ -10647,8 +10527,7 @@ class TupleExpressionContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.TupleExpressionContext = TupleExpressionContext;
-class NumberLiteralContext extends ParserRuleContext_1.ParserRuleContext {
+export class NumberLiteralContext extends ParserRuleContext {
     DecimalNumber() { return this.tryGetToken(SolidityParser.DecimalNumber, 0); }
     HexNumber() { return this.tryGetToken(SolidityParser.HexNumber, 0); }
     NumberUnit() { return this.tryGetToken(SolidityParser.NumberUnit, 0); }
@@ -10679,8 +10558,7 @@ class NumberLiteralContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.NumberLiteralContext = NumberLiteralContext;
-class IdentifierContext extends ParserRuleContext_1.ParserRuleContext {
+export class IdentifierContext extends ParserRuleContext {
     ReceiveKeyword() { return this.tryGetToken(SolidityParser.ReceiveKeyword, 0); }
     ConstructorKeyword() { return this.tryGetToken(SolidityParser.ConstructorKeyword, 0); }
     PayableKeyword() { return this.tryGetToken(SolidityParser.PayableKeyword, 0); }
@@ -10713,8 +10591,7 @@ class IdentifierContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.IdentifierContext = IdentifierContext;
-class HexLiteralContext extends ParserRuleContext_1.ParserRuleContext {
+export class HexLiteralContext extends ParserRuleContext {
     HexLiteralFragment(i) {
         if (i === undefined) {
             return this.getTokens(SolidityParser.HexLiteralFragment);
@@ -10750,8 +10627,7 @@ class HexLiteralContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.HexLiteralContext = HexLiteralContext;
-class OverrideSpecifierContext extends ParserRuleContext_1.ParserRuleContext {
+export class OverrideSpecifierContext extends ParserRuleContext {
     userDefinedTypeName(i) {
         if (i === undefined) {
             return this.getRuleContexts(UserDefinedTypeNameContext);
@@ -10787,8 +10663,7 @@ class OverrideSpecifierContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.OverrideSpecifierContext = OverrideSpecifierContext;
-class StringLiteralContext extends ParserRuleContext_1.ParserRuleContext {
+export class StringLiteralContext extends ParserRuleContext {
     StringLiteralFragment(i) {
         if (i === undefined) {
             return this.getTokens(SolidityParser.StringLiteralFragment);
@@ -10824,4 +10699,3 @@ class StringLiteralContext extends ParserRuleContext_1.ParserRuleContext {
         }
     }
 }
-exports.StringLiteralContext = StringLiteralContext;

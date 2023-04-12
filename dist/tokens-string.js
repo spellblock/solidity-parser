@@ -1,7 +1,5 @@
-"use strict";
 // copied and pasted from "./antlr/solidity.tokens"
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = `T__0=1
+export default `T__0=1
 T__1=2
 T__2=3
 T__3=4

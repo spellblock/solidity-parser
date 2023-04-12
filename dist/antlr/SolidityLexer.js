@@ -1,36 +1,14 @@
-"use strict";
 // Generated from antlr/Solidity.g4 by ANTLR 4.9.0-SNAPSHOT
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SolidityLexer = void 0;
-const ATNDeserializer_1 = require("antlr4ts/atn/ATNDeserializer");
-const Lexer_1 = require("antlr4ts/Lexer");
-const LexerATNSimulator_1 = require("antlr4ts/atn/LexerATNSimulator");
-const VocabularyImpl_1 = require("antlr4ts/VocabularyImpl");
-const Utils = __importStar(require("antlr4ts/misc/Utils"));
-class SolidityLexer extends Lexer_1.Lexer {
+import { ATNDeserializer } from "antlr4ts/atn/ATNDeserializer";
+import { Lexer } from "antlr4ts/Lexer";
+import { LexerATNSimulator } from "antlr4ts/atn/LexerATNSimulator";
+import { VocabularyImpl } from "antlr4ts/VocabularyImpl";
+import * as Utils from "antlr4ts/misc/Utils";
+export class SolidityLexer extends Lexer {
     // tslint:enable:no-trailing-whitespace
     constructor(input) {
         super(input);
-        this._interp = new LexerATNSimulator_1.LexerATNSimulator(SolidityLexer._ATN, this);
+        this._interp = new LexerATNSimulator(SolidityLexer._ATN, this);
     }
     // @Override
     // @NotNull
@@ -49,12 +27,11 @@ class SolidityLexer extends Lexer_1.Lexer {
     get modeNames() { return SolidityLexer.modeNames; }
     static get _ATN() {
         if (!SolidityLexer.__ATN) {
-            SolidityLexer.__ATN = new ATNDeserializer_1.ATNDeserializer().deserialize(Utils.toCharArray(SolidityLexer._serializedATN));
+            SolidityLexer.__ATN = new ATNDeserializer().deserialize(Utils.toCharArray(SolidityLexer._serializedATN));
         }
         return SolidityLexer.__ATN;
     }
 }
-exports.SolidityLexer = SolidityLexer;
 SolidityLexer.T__0 = 1;
 SolidityLexer.T__1 = 2;
 SolidityLexer.T__2 = 3;
@@ -264,7 +241,7 @@ SolidityLexer._SYMBOLIC_NAMES = [
     "FallbackKeyword", "ReceiveKeyword", "Identifier", "StringLiteralFragment",
     "VersionLiteral", "WS", "COMMENT", "LINE_COMMENT",
 ];
-SolidityLexer.VOCABULARY = new VocabularyImpl_1.VocabularyImpl(SolidityLexer._LITERAL_NAMES, SolidityLexer._SYMBOLIC_NAMES, []);
+SolidityLexer.VOCABULARY = new VocabularyImpl(SolidityLexer._LITERAL_NAMES, SolidityLexer._SYMBOLIC_NAMES, []);
 SolidityLexer._serializedATNSegments = 4;
 SolidityLexer._serializedATNSegment0 = "\x03\uC91D\uCABA\u058D\uAFBA\u4F53\u0607\uEA8B\uC241\x02\x87\u074F\b\x01" +
     "\x04\x02\t\x02\x04\x03\t\x03\x04\x04\t\x04\x04\x05\t\x05\x04\x06\t\x06" +

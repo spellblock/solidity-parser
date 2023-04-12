@@ -1,17 +1,11 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.visit = exports.parse = exports.tokenize = exports.ParserError = void 0;
-const antlr4ts_1 = require("antlr4ts");
-const SolidityLexer_1 = require("./antlr/SolidityLexer");
-const SolidityParser_1 = require("./antlr/SolidityParser");
-const ast_types_1 = require("./ast-types");
-const ASTBuilder_1 = require("./ASTBuilder");
-const ErrorListener_1 = __importDefault(require("./ErrorListener"));
-const tokens_1 = require("./tokens");
-class ParserError extends Error {
+import { ANTLRInputStream, CommonTokenStream } from 'antlr4ts';
+import { SolidityLexer } from './antlr/SolidityLexer';
+import { SolidityParser } from './antlr/SolidityParser';
+import { astNodeTypes } from './ast-types';
+import { ASTBuilder } from './ASTBuilder';
+import ErrorListener from './ErrorListener';
+import { buildTokenList } from './tokens';
+export class ParserError extends Error {
     constructor(args) {
         super();
         const { message, line, column } = args.errors[0];
@@ -25,26 +19,24 @@ class ParserError extends Error {
         }
     }
 }
-exports.ParserError = ParserError;
-function tokenize(input, options = {}) {
-    const inputStream = new antlr4ts_1.ANTLRInputStream(input);
-    const lexer = new SolidityLexer_1.SolidityLexer(inputStream);
-    return tokens_1.buildTokenList(lexer.getAllTokens(), options);
+export function tokenize(input, options = {}) {
+    const inputStream = new ANTLRInputStream(input);
+    const lexer = new SolidityLexer(inputStream);
+    return buildTokenList(lexer.getAllTokens(), options);
 }
-exports.tokenize = tokenize;
-function parse(input, options = {}) {
-    const inputStream = new antlr4ts_1.ANTLRInputStream(input);
-    const lexer = new SolidityLexer_1.SolidityLexer(inputStream);
-    const tokenStream = new antlr4ts_1.CommonTokenStream(lexer);
-    const parser = new SolidityParser_1.SolidityParser(tokenStream);
-    const listener = new ErrorListener_1.default();
+export function parse(input, options = {}) {
+    const inputStream = new ANTLRInputStream(input);
+    const lexer = new SolidityLexer(inputStream);
+    const tokenStream = new CommonTokenStream(lexer);
+    const parser = new SolidityParser(tokenStream);
+    const listener = new ErrorListener();
     lexer.removeErrorListeners();
     lexer.addErrorListener(listener);
     parser.removeErrorListeners();
     parser.addErrorListener(listener);
     parser.buildParseTree = true;
     const sourceUnit = parser.sourceUnit();
-    const astBuilder = new ASTBuilder_1.ASTBuilder(options);
+    const astBuilder = new ASTBuilder(options);
     astBuilder.visit(sourceUnit);
     const ast = astBuilder.result;
     if (ast === null) {
@@ -52,7 +44,7 @@ function parse(input, options = {}) {
     }
     let tokenList = [];
     if (options.tokens === true) {
-        tokenList = tokens_1.buildTokenList(tokenStream.getTokens(), options);
+        tokenList = buildTokenList(tokenStream.getTokens(), options);
     }
     if (options.tolerant !== true && listener.hasErrors()) {
         throw new ParserError({ errors: listener.getErrors() });
@@ -65,18 +57,17 @@ function parse(input, options = {}) {
     }
     return ast;
 }
-exports.parse = parse;
 function _isASTNode(node) {
     if (typeof node !== 'object' || node === null) {
         return false;
     }
     const nodeAsAny = node;
     if (Object.prototype.hasOwnProperty.call(nodeAsAny, 'type') && typeof nodeAsAny.type === "string") {
-        return ast_types_1.astNodeTypes.includes(nodeAsAny.type);
+        return astNodeTypes.includes(nodeAsAny.type);
     }
     return false;
 }
-function visit(node, visitor, nodeParent) {
+export function visit(node, visitor, nodeParent) {
     if (Array.isArray(node)) {
         node.forEach((child) => visit(child, visitor, nodeParent));
     }
@@ -101,4 +92,3 @@ function visit(node, visitor, nodeParent) {
         visitor[selector](node, nodeParent);
     }
 }
-exports.visit = visit;

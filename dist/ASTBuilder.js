@@ -1,30 +1,8 @@
-"use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ASTBuilder = void 0;
-const AbstractParseTreeVisitor_1 = require("antlr4ts/tree/AbstractParseTreeVisitor");
-const SP = __importStar(require("./antlr/SolidityParser"));
-const AST = __importStar(require("./ast-types"));
-const ErrorNode_1 = require("antlr4ts/tree/ErrorNode");
-class ASTBuilder extends AbstractParseTreeVisitor_1.AbstractParseTreeVisitor {
+import { AbstractParseTreeVisitor } from 'antlr4ts/tree/AbstractParseTreeVisitor';
+import * as SP from './antlr/SolidityParser';
+import * as AST from './ast-types';
+import { ErrorNode } from 'antlr4ts/tree/ErrorNode';
+export class ASTBuilder extends AbstractParseTreeVisitor {
     constructor(options) {
         super();
         this.options = options;
@@ -38,7 +16,7 @@ class ASTBuilder extends AbstractParseTreeVisitor_1.AbstractParseTreeVisitor {
     }
     visitSourceUnit(ctx) {
         var _a;
-        const children = ((_a = ctx.children) !== null && _a !== void 0 ? _a : []).filter((x) => !(x instanceof ErrorNode_1.ErrorNode));
+        const children = ((_a = ctx.children) !== null && _a !== void 0 ? _a : []).filter((x) => !(x instanceof ErrorNode));
         const node = {
             type: 'SourceUnit',
             children: children.slice(0, -1).map((child) => this.visit(child)),
@@ -1601,7 +1579,10 @@ class ASTBuilder extends AbstractParseTreeVisitor_1.AbstractParseTreeVisitor {
         if (this.options.range === true) {
             node.range = this._range(ctx);
         }
-        return Object.assign(Object.assign({}, nodeWithMeta), node);
+        return {
+            ...nodeWithMeta,
+            ...node,
+        };
     }
     _mapCommasToNulls(children) {
         if (children.length === 0) {
@@ -1632,7 +1613,6 @@ class ASTBuilder extends AbstractParseTreeVisitor_1.AbstractParseTreeVisitor {
         return values;
     }
 }
-exports.ASTBuilder = ASTBuilder;
 function isBinOp(op) {
     return AST.binaryOpValues.includes(op);
 }

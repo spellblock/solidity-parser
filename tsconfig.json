@@ -14,8 +14,8 @@
     "lib": [
       "es2016"
     ],
-    "target": "es6",
-    "module": "commonjs",
+    "target": "es2019",
+    "module": "ESNext",
     "moduleResolution": "node",
     "strict": true,
     "skipLibCheck": true,

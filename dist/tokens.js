@@ -1,11 +1,5 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.buildTokenList = void 0;
-const tokens_string_1 = __importDefault(require("./tokens-string"));
-const tokens = tokens_string_1.default;
+import untypedTokens from './tokens-string';
+const tokens = untypedTokens;
 const TYPE_TOKENS = [
     'var',
     'bool',
@@ -74,7 +68,7 @@ function getTokenTypeMap() {
         return acum;
     }, {});
 }
-function buildTokenList(tokensArg, options) {
+export function buildTokenList(tokensArg, options) {
     const tokenTypes = getTokenTypeMap();
     const result = tokensArg.map((token) => {
         var _a, _b;
@@ -93,4 +87,3 @@ function buildTokenList(tokensArg, options) {
     });
     return result;
 }
-exports.buildTokenList = buildTokenList;
