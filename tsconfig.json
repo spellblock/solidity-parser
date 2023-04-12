@@ -1,12 +1,19 @@
 {
-  "include": ["src/**/*.ts", "test/**/*.ts"],
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
   "compilerOptions": {
     "outDir": "dist",
     "allowJs": true,
     "declaration": true,
-    "emitDeclarationOnly": true,
     "esModuleInterop": true,
-    "lib": ["es2016"],
+    "lib": [
+      "es2016"
+    ],
     "target": "es6",
     "module": "commonjs",
     "moduleResolution": "node",
