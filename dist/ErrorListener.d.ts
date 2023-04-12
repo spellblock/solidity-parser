@@ -1,5 +1,5 @@
-import antlr4 from "antlr4/index";
-declare class ErrorListener extends antlr4.error.ErrorListener {
+import { ErrorListener as ANTLRErrorListener } from "antlr4";
+declare class ErrorListener extends ANTLRErrorListener<any> {
     private _errors;
     constructor();
     syntaxError(recognizer: any, offendingSymbol: any, line: number, column: number, message: string): void;
